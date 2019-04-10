@@ -3,6 +3,8 @@ import Header from './Header';
 import Formulario from './Fromulario';
 import { obtenerDiferenciaAnio, calcularMarca, obtenerPlan } from '../helper';
 import Resumen from './Resumen';
+import Resultado from './Resultado';
+
 
 
 
@@ -54,18 +56,20 @@ class App extends Component {
     return (
       <div className="contenedor">
             <Header
-                titulo="Cotizador de seguros de Autos"
+              titulo="Cotizador de seguros de Autos"
             /> 
-        <div className="contenedor-formulario">
+         <div className="contenedor-formulario">
             <Formulario
               cotizarSeguro={this.cotizarSeguro}
             />
             <Resumen
-              datos = {this.state.datos}
-              resultado = {this.state.resultado}
+              datos={this.state.datos}
             />
-        </div>
-      </div>
+            <Resultado
+              resultado={this.state.resultado}
+            />
+         </div>
+    </div>
     );
   }
 }
