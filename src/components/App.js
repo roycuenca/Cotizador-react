@@ -61,7 +61,7 @@ class App extends Component {
               cotizarSeguro={this.cotizarSeguro}
             />
             <Resumen
-              datos = {this.props.state.datos}
+              datos = {this.state.datos}
               resultado = {this.state.resultado}
             />
         </div>
